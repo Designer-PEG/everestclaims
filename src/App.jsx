@@ -5,7 +5,6 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import More from './pages/More';
 import Footer from './components/Footer';
-import './index.css';
 import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
