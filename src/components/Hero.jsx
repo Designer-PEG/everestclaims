@@ -1,64 +1,63 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { ArrowRightIcon, PhoneIcon, ChatBubbleBottomCenterTextIcon } from '@heroicons/react/24/outline';
 import Hero1 from '../assets/img/hero_1.jpg';
 import Hero2 from '../assets/img/hero_2.jpg';
 
 const Hero = () => {
   const navigate = useNavigate();
-  const phoneNumber = "+9779851135521"; // Raw number without formatting for tel: link
+  const phoneNumber = "+977 985-1135421";
 
   const handleSurveyClick = () => {
-    // For mobile devices, this will open the phone dialer
     window.location.href = `tel:${phoneNumber}`;
   };
 
   const handleContactClick = () => {
-    // Navigate to contact page using React Router
     navigate('/contact');
   };
 
   return (
-    <section className="bg-gradient-to-r from-white to-white pt-20 pb-2 md:pt-20 min-h-[90vh] flex items-center">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        {/* Grid layout - 1x2 on desktop, 1x1 on mobile */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 items-center">
-          {/* Content column (left side) */}
-          <div className="order-2 md:order-1 space-y-4 md:space-y-6">
-            <h1 className="text-3xl md:text-4xl font-bold text-green-700 leading-tight">
-              Trusted Insurance Surveyors, <br />
-              <span className="text-blue-800">Precise, Independent,</span> <br />
-              <span className="text-blue-800">Committed to You.</span>
+    <section className="bg-white pt-24 pb-12 md:pt-28 min-h-[90vh] flex items-center">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          {/* Content column */}
+          <div className="order-2 md:order-1 space-y-6">
+            <div className="inline-flex items-center px-3 py-1 rounded-full bg-neutral-100 text-neutral-600 text-sm font-medium mb-4">
+              <span>Trusted Since 2024</span>
+            </div>
+            <h1 className="text-4xl md:text-5xl font-bold text-neutral-900 leading-tight">
+              Precision Insurance Assessments <span className="text-blue-600">You Can Trust</span>
             </h1>
-            <p className="text-lg md:text-lg text-gray-600 max-w-lg">
-              We help you navigate claims with accuracy, fairness, and unwavering integrity — ensuring your peace of mind when you need it most.
+            <p className="text-lg md:text-xl text-neutral-600 max-w-lg leading-relaxed">
+              Independent, impartial evaluations for insurers, businesses, and policyholders. 
+              Our certified surveyors deliver accurate reports that stand up to scrutiny.
             </p>
-            <div className="flex flex-col sm:flex-row gap-6">
+            <div className="flex flex-col sm:flex-row gap-4 pt-2">
               <button 
                 onClick={handleSurveyClick}
-                className="border-2 border-red-600 bg-white hover:bg-red-600 hover:text-white text-red-600 px-4 py-2 rounded-lg font-semibold hover:cursor-pointer transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1"
-                onMouseEnter={(e) => e.currentTarget.textContent = "+977 (98) 51135521"}
-                onMouseLeave={(e) => e.currentTarget.textContent = "Request a Survey"}
+                className="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:shadow-md"
               >
-                Request a Survey
+                <PhoneIcon className="w-5 h-5" />
+                Request Assessment
               </button>
               <button 
                 onClick={handleContactClick}
-                className="border-2 border-blue-800 bg-white hover:bg-blue-800 hover:text-white text-blue-800 px-4 py-2 rounded-lg font-semibold hover:cursor-pointer transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1"
+                className="flex items-center justify-center gap-2 border border-neutral-300 bg-white hover:bg-neutral-50 text-neutral-700 px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:shadow-md"
               >
-                Contact Our Experts
+                <ChatBubbleBottomCenterTextIcon className="w-5 h-5" />
+                Speak to an Expert
               </button>
             </div>
           </div>
 
-          {/* Image column (right side) */}
+          {/* Image column */}
           <div className="order-1 md:order-2 relative">
-            <div className="relative rounded-xl overflow-hidden shadow-2xl">
+            <div className="relative rounded-xl overflow-hidden shadow-xl border border-neutral-200 aspect-[4/3]">
               <img 
                 src={Hero1} 
                 alt="Insurance surveyor at work" 
-                className="w-full h-auto max-h-[400px] object-cover"
+                className="w-full h-full object-cover"
               />
-              <div className="absolute -bottom-6 -right-6 w-[60%] h-[50%] border-4 border-white rounded-lg overflow-hidden shadow-lg">
+              <div className="absolute -bottom-6 -right-6 w-[55%] h-[45%] bg-white rounded-lg shadow-lg border border-neutral-100 overflow-hidden">
                 <img 
                   src={Hero2} 
                   alt="Team of insurance professionals" 
@@ -70,7 +69,7 @@ const Hero = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
 export default Hero;

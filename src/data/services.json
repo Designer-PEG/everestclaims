@@ -1,0 +1,114 @@
+[
+  {
+    "id": 1,
+    "slug": "insurance-claims",
+    "title": "Insurance Claims",
+    "description": "Our expert team provides comprehensive support for all types of insurance claims. From initial damage inspection to final settlement, we ensure your rights and interests are fully represented throughout the entire claims process.",
+    "features": [
+      "Thorough damage inspection and assessment",
+      "Complete documentation and evidence preparation",
+      "Claim submission guidance and support",
+      "Direct communication and negotiation with insurers",
+      "Continuous tracking, updates, and status reporting"
+    ],
+    "icon": "DocumentTextIcon"
+  },
+  {
+    "id": 2,
+    "slug": "risk-assessment",
+    "title": "Risk Assessment",
+    "description": "We identify potential risks and vulnerabilities in your property, business, or assets through systematic evaluation. Our goal is to help you prevent losses before they occur with strategic risk management planning.",
+    "features": [
+      "On-site property evaluations",
+      "Fire, theft, and hazard risk analysis",
+      "Regulatory and compliance risk checks",
+      "Custom mitigation and contingency planning",
+      "Periodic audits and improvement reports"
+    ],
+    "icon": "ShieldCheckIcon"
+  },
+  {
+    "id": 3,
+    "slug": "legal-consultation",
+    "title": "Legal Consultation",
+    "description": "Protect your legal rights during the claims process with our experienced legal consultants. We help interpret complex policy terms and support you in disputes or litigation to ensure a fair and lawful resolution.",
+    "features": [
+      "Policy language and coverage interpretation",
+      "Mediation and arbitration support",
+      "Legal dispute and appeals assistance",
+      "Review of contracts and claim agreements",
+      "Advisory on legal obligations and timelines"
+    ],
+    "icon": "ScaleIcon"
+  },
+  {
+    "id": 4,
+    "slug": "financial-recovery",
+    "title": "Financial Recovery",
+    "description": "Our specialists work to maximize your compensation after a loss. We provide detailed financial analysis and assist with accurate valuation, ensuring you recover what you're rightfully owed under your policy.",
+    "features": [
+      "Accurate loss quantification and reporting",
+      "Analysis of business interruption impacts",
+      "Support for depreciation and valuation concerns",
+      "Strategic guidance on settlement options",
+      "Budgeting and future financial planning"
+    ],
+    "icon": "BanknotesIcon"
+  },
+  {
+    "id": 5,
+    "slug": "claims-audit",
+    "title": "Claims Audit",
+    "description": "We provide an in-depth review of your past or ongoing claims to identify inaccuracies, underpayments, or missed opportunities. Ensure you’ve received the compensation you’re entitled to.",
+    "features": [
+      "Review of closed or denied claims",
+      "Recalculation of loss estimates",
+      "Detection of insurer errors or gaps",
+      "Appeal preparation and resubmission",
+      "Detailed audit reports and summaries"
+    ],
+    "icon": "MagnifyingGlassCircleIcon"
+  },
+  {
+    "id": 6,
+    "slug": "emergency-response",
+    "title": "Emergency Response Coordination",
+    "description": "In times of crisis, we coordinate swift emergency response services to help protect your property, secure assets, and initiate claim procedures immediately.",
+    "features": [
+      "24/7 disaster response dispatch",
+      "Immediate loss control and mitigation",
+      "Initial damage documentation",
+      "Emergency board-up and tarping services",
+      "Direct insurer notification"
+    ],
+    "icon": "BellAlertIcon"
+  },
+  {
+    "id": 7,
+    "slug": "policy-review",
+    "title": "Policy Review & Optimization",
+    "description": "Ensure you have the best possible coverage with a professional review of your insurance policies. We help you understand coverage limits, exclusions, and recommend adjustments to fit your needs.",
+    "features": [
+      "Full review of current insurance policies",
+      "Gap identification and risk exposure analysis",
+      "Premium and coverage optimization",
+      "Recommendations for better policy alignment",
+      "Assistance with policy updates and renewals"
+    ],
+    "icon": "ClipboardDocumentCheckIcon"
+  },
+  {
+    "id": 8,
+    "slug": "client-education",
+    "title": "Client Education & Workshops",
+    "description": "We empower our clients with the knowledge and tools to handle insurance-related matters more confidently. Join our workshops or request personalized training sessions.",
+    "features": [
+      "Workshops on insurance basics",
+      "Claim process walk-throughs",
+      "Risk management training",
+      "Legal literacy for policyholders",
+      "Custom sessions for businesses or individuals"
+    ],
+    "icon": "UserGroupIcon"
+  }
+]

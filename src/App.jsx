@@ -3,7 +3,14 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
-import More from './pages/More';
+import Services from './pages/Services';
+import ServiceDetailPage from './pages/ServiceDetailPage';
+import Cases from './pages/Cases';
+import Career from './pages/Careeer';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfService from './pages/TermsOfService';
+import Disclaimer from './pages/Disclaimer';
+
 import Footer from './components/Footer';
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -20,8 +27,15 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/more" element={<More />} />
-        </Routes>
+          <Route path="/services" element={<Services />} />
+          <Route path="/services/:serviceSlug" element={<ServiceDetailPage />} />
+          <Route path="*" element={<Services />} />
+          <Route path="/cases" element={<Cases />} />
+          <Route path="/careers" element={<Career />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
+          <Route path="/disclaimer" element={<Disclaimer />} />
+          </Routes>
       </main>
 
       <Footer />

@@ -1,0 +1,17 @@
+[
+  {
+    "id": "ex1",
+    "title": "Example Position",
+    "department": "CA, Audit Expert",
+    "location": "tinkune, Kathmandu",
+    "type": "Contract",
+    "description": "This won't show up...",
+    "requirements": [
+        "Please Structure the job posting like this",
+        "And the requirements also like this",
+        "Or use this as a example to structure the career section",
+        "and use ai to write the requirements in the future"
+    ],
+    "posted": "2023-06-01"
+  }
+]

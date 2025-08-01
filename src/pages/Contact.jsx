@@ -2,6 +2,17 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import {
+  EnvelopeIcon,
+  PhoneIcon,
+  MapPinIcon,
+  ClockIcon,
+  CheckCircleIcon,
+  ExclamationCircleIcon,
+  XCircleIcon,
+  ArrowPathIcon,
+  PaperAirplaneIcon
+} from "@heroicons/react/24/outline";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -200,22 +211,22 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 pt-20 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
+        <div className="text-center mb-16">
           <motion.h1 
             initial={{ y: -20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="text-3xl font-extrabold text-gray-900 sm:text-4xl"
+            className="text-4xl font-bold text-gray-900 sm:text-5xl"
           >
-            Connect With Us
+            Contact Us
           </motion.h1>
           <motion.p
             initial={{ y: -10, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="mt-4 text-xl text-gray-600 max-w-3xl mx-auto"
+            className="mt-6 text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
           >
-            Whether you are an insurer, business, or individual, we are here to protect your interests.
+            Have questions or need assistance? Our team is here to help you with any inquiries you may have.
           </motion.p>
         </div>
 
@@ -225,9 +236,10 @@ const Contact = () => {
             initial="hidden"
             animate="visible"
             variants={containerVariants}
-            className="bg-white p-8 shadow-xl rounded-lg border border-gray-100"
+            className="bg-white p-8 shadow-lg rounded-xl border border-gray-100"
           >
-            <motion.h2 variants={itemVariants} className="text-2xl font-bold text-gray-800 mb-6">
+            <motion.h2 variants={itemVariants} className="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+              <PaperAirplaneIcon className="h-6 w-6 text-blue-600 mr-2" />
               Send us a message
             </motion.h2>
             
@@ -235,13 +247,11 @@ const Contact = () => {
               <motion.div 
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
-                className="bg-green-50 border border-green-200 rounded-lg p-6"
+                className="bg-green-50 border border-green-200 rounded-xl p-6"
               >
-                <div className="flex items-center">
+                <div className="flex items-start">
                   <div className="flex-shrink-0">
-                    <svg className="h-5 w-5 text-green-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
+                    <CheckCircleIcon className="h-5 w-5 text-green-500" />
                   </div>
                   <div className="ml-3">
                     <h3 className="text-sm font-medium text-green-800">Message sent successfully!</h3>
@@ -251,8 +261,9 @@ const Contact = () => {
                     <div className="mt-4">
                       <button
                         onClick={resetForm}
-                        className="text-sm font-medium text-green-800 hover:text-green-600 transition-colors"
+                        className="inline-flex items-center text-sm font-medium text-green-800 hover:text-green-600 transition-colors"
                       >
+                        <ArrowPathIcon className="h-4 w-4 mr-1" />
                         Send another message
                       </button>
                     </div>
@@ -269,12 +280,10 @@ const Contact = () => {
                   <motion.div 
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="bg-red-50 border border-red-200 rounded-lg p-4 mb-6"
+                    className="bg-red-50 border border-red-200 rounded-xl p-4 mb-6"
                   >
                     <div className="flex items-center text-red-800">
-                      <svg className="h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
-                      </svg>
+                      <ExclamationCircleIcon className="h-5 w-5 mr-2" />
                       <span className="font-medium">{errors.form}</span>
                     </div>
                   </motion.div>
@@ -284,12 +293,10 @@ const Contact = () => {
                   <motion.div 
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="bg-red-50 border border-red-200 rounded-lg p-4 mb-6"
+                    className="bg-red-50 border border-red-200 rounded-xl p-4 mb-6"
                   >
                     <div className="flex items-center text-red-800">
-                      <svg className="h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
-                      </svg>
+                      <XCircleIcon className="h-5 w-5 mr-2" />
                       <span className="font-medium">{submitError}</span>
                     </div>
                   </motion.div>
@@ -306,8 +313,8 @@ const Contact = () => {
                       id="name"
                       value={formData.name}
                       onChange={handleChange}
-                      placeholder="John Smith"
-                      className={`block w-full px-4 py-3 rounded-md border ${
+                      placeholder="Ex: Suresh Sharma"
+                      className={`block w-full px-4 py-3 rounded-lg border ${
                         errors.name 
                           ? 'border-red-300 text-red-900 placeholder-red-300 focus:ring-red-500 focus:border-red-500' 
                           : 'border-gray-300 placeholder-gray-400 focus:ring-blue-500 focus:border-blue-500'
@@ -316,9 +323,7 @@ const Contact = () => {
                     />
                     {errors.name && (
                       <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
-                        <svg className="h-5 w-5 text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                          <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
-                        </svg>
+                        <ExclamationCircleIcon className="h-5 w-5 text-red-500" />
                       </div>
                     )}
                   </div>
@@ -338,8 +343,8 @@ const Contact = () => {
                       id="email"
                       value={formData.email}
                       onChange={handleChange}
-                      placeholder="john@example.com"
-                      className={`block w-full px-4 py-3 rounded-md border ${
+                      placeholder="Ex: everestclaims8848@gmail.com"
+                      className={`block w-full px-4 py-3 rounded-lg border ${
                         errors.email 
                           ? 'border-red-300 text-red-900 placeholder-red-300 focus:ring-red-500 focus:border-red-500' 
                           : 'border-gray-300 placeholder-gray-400 focus:ring-blue-500 focus:border-blue-500'
@@ -348,9 +353,7 @@ const Contact = () => {
                     />
                     {errors.email && (
                       <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
-                        <svg className="h-5 w-5 text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                          <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
-                        </svg>
+                        <ExclamationCircleIcon className="h-5 w-5 text-red-500" />
                       </div>
                     )}
                   </div>
@@ -371,7 +374,7 @@ const Contact = () => {
                       value={formData.message}
                       onChange={handleChange}
                       placeholder="How can we help you today?"
-                      className={`block w-full px-4 py-3 rounded-md border ${
+                      className={`block w-full px-4 py-3 rounded-lg border ${
                         errors.message 
                           ? 'border-red-300 text-red-900 placeholder-red-300 focus:ring-red-500 focus:border-red-500' 
                           : 'border-gray-300 placeholder-gray-400 focus:ring-blue-500 focus:border-blue-500'
@@ -380,9 +383,7 @@ const Contact = () => {
                     />
                     {errors.message && (
                       <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
-                        <svg className="h-5 w-5 text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                          <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
-                        </svg>
+                        <ExclamationCircleIcon className="h-5 w-5 text-red-500" />
                       </div>
                     )}
                   </div>
@@ -398,7 +399,7 @@ const Contact = () => {
                     variants={buttonVariants}
                     whileHover="hover"
                     whileTap="tap"
-                    className={`w-full flex justify-center items-center py-3 px-6 border border-transparent rounded-md shadow-sm text-sm font-medium text-white ${
+                    className={`w-full flex justify-center items-center py-3 px-6 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white ${
                       isSubmitting || timerActive 
                         ? 'bg-blue-400 cursor-not-allowed' 
                         : 'bg-blue-600 hover:bg-blue-700'
@@ -416,9 +417,7 @@ const Contact = () => {
                       `Please wait ${formatTime(timeLeft)}`
                     ) : (
                       <>
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                        </svg>
+                        <PaperAirplaneIcon className="h-5 w-5 mr-2" />
                         Send Message
                       </>
                     )}
@@ -429,70 +428,73 @@ const Contact = () => {
           </motion.div>
 
           {/* Contact Information */}
-          <div className="bg-white p-8 shadow-xl rounded-lg">
-            <div className="space-y-8">
+          <div className="bg-white p-8 shadow-lg rounded-xl border border-gray-100">
+            <div className="space-y-10">
               <div>
-                <h2 className="text-2xl font-bold text-gray-800 mb-4">Contact Information</h2>
-                <p className="text-gray-600 mb-6">
+                <h2 className="text-2xl font-bold text-gray-800 mb-4 flex items-center">
+                  <EnvelopeIcon className="h-6 w-6 text-blue-600 mr-2" />
+                  Contact Information
+                </h2>
+                <p className="text-gray-600 mb-6 leading-relaxed">
                   Everest Claims and Advisory Pvt Ltd — Standing Strong for Fairness, Accuracy, and Trust.
+                  Reach out to us through any of these channels and we'll respond promptly.
                 </p>
               </div>
 
               <div className="space-y-6">
                 <div className="flex items-start">
                   <div className="flex-shrink-0">
-                    <div className="flex items-center justify-center h-10 w-10 rounded-md bg-blue-100 text-blue-600">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                      </svg>
+                    <div className="flex items-center justify-center h-12 w-12 rounded-xl bg-blue-100 text-blue-600">
+                      <PhoneIcon className="h-6 w-6" />
                     </div>
                   </div>
                   <div className="ml-4">
-                    <h3 className="text-lg font-medium text-gray-900">Phone</h3>
-                    <p className="text-gray-600">+977-9851135421</p>
+                    <h3 className="text-lg font-semibold text-gray-900">Phone</h3>
+                    <p className="mt-1 text-gray-600">+977-9851135421</p>
+                    <p className="mt-1 text-sm text-gray-500">Available during business hours</p>
                   </div>
                 </div>
 
                 <div className="flex items-start">
                   <div className="flex-shrink-0">
-                    <div className="flex items-center justify-center h-10 w-10 rounded-md bg-blue-100 text-blue-600">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                      </svg>
+                    <div className="flex items-center justify-center h-12 w-12 rounded-xl bg-blue-100 text-blue-600">
+                      <EnvelopeIcon className="h-6 w-6" />
                     </div>
                   </div>
                   <div className="ml-4">
-                    <h3 className="text-lg font-medium text-gray-900">Email</h3>
-                    <p className="text-gray-600">everestclaims8848@gmail.com</p>
+                    <h3 className="text-lg font-semibold text-gray-900">Email</h3>
+                    <p className="mt-1 text-gray-600">everestclaims8848@gmail.com</p>
+                    <p className="mt-1 text-sm text-gray-500">Typically response time within 3-4 business days</p>
                   </div>
                 </div>
 
                 <div className="flex items-start">
                   <div className="flex-shrink-0">
-                    <div className="flex items-center justify-center h-10 w-10 rounded-md bg-blue-100 text-blue-600">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                      </svg>
+                    <div className="flex items-center justify-center h-12 w-12 rounded-xl bg-blue-100 text-blue-600">
+                      <MapPinIcon className="h-6 w-6" />
                     </div>
                   </div>
                   <div className="ml-4">
-                    <h3 className="text-lg font-medium text-gray-900">Address</h3>
-                    <p className="text-gray-600">Tinkune, Kathmandu</p>
+                    <h3 className="text-lg font-semibold text-gray-900">Office Address</h3>
+                    <p className="mt-1 text-gray-600">Tinkune, Kathmandu</p>
+                    <p className="mt-1 text-sm text-gray-500">Visit by appointment only</p>
                   </div>
                 </div>
               </div>
 
               <div className="border-t border-gray-200 pt-6">
-                <h3 className="text-lg font-medium text-gray-900 mb-4">Business Hours</h3>
-                <ul className="space-y-2">
-                  <li className="flex justify-between text-sm text-gray-600">
-                    <span>Sunday - Friday</span>
-                    <span>10:00 AM - 5:00 PM</span>
+                <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                  <ClockIcon className="h-5 w-5 text-blue-600 mr-2" />
+                  Business Hours
+                </h3>
+                <ul className="space-y-3">
+                  <li className="flex justify-between text-base text-gray-600">
+                    <span className="font-medium text-green-500">Sunday - Friday</span>
+                    <span className="text-green-500">10:00 AM - 5:00 PM</span>
                   </li>
-                  <li className="flex justify-between text-sm text-gray-600">
-                    <span>Saturday</span>
-                    <span>Closed</span>
+                  <li className="flex justify-between text-base text-gray-600">
+                    <span className="font-medium text-red-500">Saturday</span>
+                    <span className="text-red-500">Closed</span>
                   </li>
                 </ul>
               </div>
