@@ -139,7 +139,7 @@ const Contact = () => {
       formDataObj.append('email', formData.email);
       formDataObj.append('message', formData.message);
 
-      const response = await fetch('https://script.google.com/macros/s/AKfycbzV5mBgr83fgk-4bLiEKloxTF_DXPF2njr5OaVC-VSc_qdK3BV4Cv4OTyylUwaWn3uOIA/exec', {
+      const response = await fetch('https://script.google.com/macros/s/AKfycbyFSj59-mDvYA1L1qB2t7q4_bPGi8ukr_LbIMtGqhIshr9BBELC_7TOKLVHbzII_4IjsA/exec', {
         method: 'POST',
         body: formDataObj,
       });
